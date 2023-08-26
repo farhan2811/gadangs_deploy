@@ -1,0 +1,14 @@
+Berikut adalah progress untuk bagian Kelola Pricelist
+Semua fitur insyaallah berjalan dengan baik.
+API yang sudah diimplementasikan adalah:
+1. Get Pricelist
+2. Add Pricelist
+3. Edit Pricelist
+4. Delete Pricelist
+
+Silahkan Copy dan Paste Folder ini ke
+src > routes > super-admin > kelola-perum
+
+Apabila sudah ada, silahkan di Replace dengan yang baru
+
+Semoga membantu 😁👍

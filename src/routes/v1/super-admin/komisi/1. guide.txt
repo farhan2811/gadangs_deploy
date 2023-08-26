@@ -1,0 +1,15 @@
+Berikut adalah progress untuk bagian Komisi
+Fitur yang sudah
+1. Get Daftar Komisi
+2. Lihat aturan komisi
+3. Bayar Komisi
+4. Membuat Aturan Komisi
+5. Edit Aturan Komisi
+6. Hapus Aturan Komisi
+
+Silahkan Copy dan Paste Folder ini ke
+src > routes > super-admin
+
+Apabila sudah ada, silahkan di Replace dengan yang baru
+
+Semoga membantu 😁👍

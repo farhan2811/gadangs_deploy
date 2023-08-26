@@ -1,0 +1,14 @@
+Berikut adalah progress untuk bagian Agensi
+Semua api sudah di pasang, berikut detailnya:
+1. Get Agensi
+2. Get Detail Agensi
+3. Tambah Agensi
+4. Edit Agensi
+5. Hapus Agensi
+
+Silahkan Copy dan Paste Folder ini ke
+src > routes > super-admin
+
+Apabila sudah ada, silahkan di Replace dengan yang baru
+
+Semoga membantu 😁👍

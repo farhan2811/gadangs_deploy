@@ -1,0 +1,14 @@
+Berikut adalah progress untuk bagian Pengaturan Profile dan Akun
+Api yang sudah di implemen pada bagian ini adalah
+1. Detail Akun (user yang login)
+2. Edit Informasi Personal User
+3. Mengubah Foto profil
+4. Mengubah Email
+5. Mengubah Password
+
+Silahkan Copy dan Paste Folder ini ke
+src > routes > super-admin
+
+Apabila sudah ada, silahkan di Replace dengan yang baru
+
+Semoga membantu 😁👍
