@@ -33,6 +33,9 @@
 	let selectedShapeName = "";
 	let id_frag;
 	let numberPage;
+	let stageData;
+	let id_ttd;
+	let frag_id;
 
 
 	let getDetailDocs = () => {
@@ -46,6 +49,7 @@
 			docs.fragment_surat.forEach((item, index) => {
 				if (item.id_fragment_surat == unit_datas_real[2]) {
 					id_frag = item
+					frag_id = item.id_fragment_surat
 				}
 			})
 		})
@@ -204,7 +208,7 @@
 	// 	stage.add(layer);
 	})
 
-	let attachSign = (image, id) => {
+	let attachSign = (image, id, id_sign) => {
 		for (var i = 0; i < sign.length; i++) {
         if (i == id) {
             document.getElementById(`ttd_${i}`).style.borderColor = "#02C58F"
@@ -212,6 +216,7 @@
             document.getElementById(`ttd_${i}`).style.borderColor = "#E5E5E5"
         }
     }
+    	id_ttd = id_sign
 		itemUrl = image
 		selectSign = true
 	}
@@ -219,6 +224,7 @@
 	$: if(selectSign == true) {
 		let img = new Image();
 		img.src = itemUrl
+		img.setAttribute('crossOrigin', 'anonymous');
 		img.onload = function() {
 			signConfig = {
 				x: 50,
@@ -236,7 +242,7 @@
 
 	function handleStageMouseDown(e) {
 	    const konvaEvent = e.detail;
-	    console.log(konvaEvent)
+	    stageData = konvaEvent.target.getStage()
 	    // clicked on stage - clear selection
 	    if (konvaEvent.target === konvaEvent.target.getStage()) {
 	      selectedShapeName = "";
@@ -299,6 +305,7 @@
 	$: if(doc_set) {
 		let img = new Image();
 		img.src = pageView
+		img.setAttribute('crossOrigin', 'anonymous');
 		img.onload = function() {
 			console.log(img.width)
 			console.log(img.height)
@@ -435,7 +442,34 @@
 						for (var i = 0; i < sign.length; i++) {
 					        document.getElementById(`ttd_${i}`).style.borderColor = "#E5E5E5"
 					}}}><span>Reset</span></button>
-					<button class="btn-fill-primary flex flex-center-vertical flex-center-horizontal flex-gap-small w-25"><span>Simpan</span></button>
+					<button class="btn-fill-primary flex flex-center-vertical flex-center-horizontal flex-gap-small w-25" on:click={() => {
+						console.log(stageData.width())
+						console.log(stageData.height())
+						var pdf = new jsPDF('p', 'px', [stageData.width(), stageData.height()]);
+
+						pdf.addImage(
+						  stageData.toDataURL({ pixelRatio: 1 }),
+						  0,
+						  0,
+						  stageData.width(),
+						  stageData.height()
+						);
+
+						console.log(pdf.output('datauristring'))
+
+						const formData = new FormData();
+						// console.log(pdf.output('datauristring').split('base64,')[1].length)
+						formData.append('id_tanda_tangan', id_ttd);
+						formData.append('dokumen', pdf.output('datauristring').split('base64,')[1]);
+
+						ApiController({
+							method: "POST",
+							endpoint: `approval/FRAGMENT/${frag_id}/sign`,
+							datas: formData
+						}).then(response => {
+							console.log(response)
+						})
+					}}><span>Simpan</span></button>
 				</div>
 			</div>
 			<div class="card w-100 flex flex-direction-col flex-gap-large padding-pick-ttd">
@@ -444,7 +478,7 @@
 					{#each sign.slice(start_paging_ttd, end_paging_ttd) as s, index}
 						{#if sign.slice(start_paging_ttd, end_paging_ttd).length == 4}
 						<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-							<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+							<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100">
 				    		</div>
 				    		<div class="jabatan-ttd">
@@ -457,7 +491,7 @@
 				    	{:else if sign.slice(start_paging_ttd, end_paging_ttd).length == 3}
 				    	{#if index == 2}
 				    	<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100">
 				    		</div>
 				    		<div class="jabatan-ttd">
@@ -470,7 +504,7 @@
 				    	<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25"><div class="card-ttd"></div></div>
 			    		{:else}
 			    		<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100" draggable="true">
 				    		</div>
 				    		<div class="jabatan-ttd">
@@ -484,7 +518,7 @@
 				    	{:else if sign.slice(start_paging_ttd, end_paging_ttd).length == 2}
 				    	{#if index == 1}
 				    	<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100" draggable="true">
 				    		</div>
 				    		<div class="jabatan-ttd">
@@ -498,7 +532,7 @@
 			    		<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25"><div class="card-ttd"></div></div>
 			    		{:else}
 			    		<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100" draggable="true">
 				    		</div>
 				    		<div class="jabatan-ttd">
@@ -511,7 +545,7 @@
 				    	{/if}
 				    	{:else if sign.slice(start_paging_ttd, end_paging_ttd).length == 1}
 				    	<div class="padding-items-carousel-ttd flex flex-direction-col flex-gap-small w-25">
-				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index)}}>
+				    		<div class="card-ttd" style="border: 1px solid #E5E5E5;" id="ttd_{index}" on:click={() => {attachSign(s.tanda_tangan, index, s.id_tanda_tangan)}}>
 			    			<img src="{s.tanda_tangan}" class="w-100" draggable="true">
 				    		</div>
 				    		<div class="jabatan-ttd">

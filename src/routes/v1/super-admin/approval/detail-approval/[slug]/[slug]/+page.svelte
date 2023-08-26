@@ -64,7 +64,7 @@
 		}).then(response => {
 			docs = response.data.data.berkas[0]
 			console.log(docs)
-			// numPagesDocs = docs.fragment_surat.length;
+			numPagesDocs = docs.fragment_surat.length;
 		})
 	}
 	// docsViewer = pdfjsLib.getDocument(docs.berkas.dokumen)
@@ -157,8 +157,22 @@
 						</div>
 					</div>
 					<div class="flex flex-gap-regular">
-						<button class="btn-fill-danger flex flex-center-vertical flex-gap-small"><span>Reject</span></button>
-						<button class="btn-fill-primary flex flex-center-vertical flex-gap-small"> <span>Simpan dan Approve</span></button>
+						<button class="btn-fill-danger flex flex-center-vertical flex-gap-small" on:click={() => {
+							ApiController({
+								method: "POST",
+								endpoint: `approval/${unit_datas_real[0]}/${unit_datas_real[1]}/reject`
+							}).then(response => {
+								console.log(response)
+							})
+						}}><span>Reject</span></button>
+						<button class="btn-fill-primary flex flex-center-vertical flex-gap-small" on:click={() => {
+							ApiController({
+								method: "POST",
+								endpoint: `approval/${unit_datas_real[0]}/${unit_datas_real[1]}/approve`
+							}).then(response => {
+								console.log(response)
+							})
+						}}> <span>Simpan dan Approve</span></button>
 					</div>
 				</div>
 				<div class="flex flex-direction-col flex-gap-large w-100">

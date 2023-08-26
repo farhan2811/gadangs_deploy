@@ -1,9 +1,9 @@
 <script type="text/javascript">
-	import Sidebar from '../../../../../components/sidebar.svelte'
-	import Navbar from '../../../../../components/navbar.svelte'
+	import Sidebar from '../../../../../../components/sidebar.svelte'
+	import Navbar from '../../../../../../components/navbar.svelte'
 	import { onMount, afterUpdate } from 'svelte';
 	import {fly, scale} from 'svelte/transition'
-	import ApiController from '../../../../../ApiController';
+	import ApiController from '../../../../../../ApiController';
 
 	export let data
 
@@ -196,7 +196,7 @@
 												<div class="flex flex-center-vertical flex-between-horizontal">
 													<div class="secondary-title-card-detail">Pembangunan</div>
 													<div class="flex flex-gap-small flex-center-vertical">
-														<a href="/teknis/unit/detail-unit/{data.params.slug}/atur-pembangunan" class="btn-outline-set no-decor">Atur</a>
+														<a href="/v1/teknis/unit/detail-unit/{data.params.slug}/atur-pembangunan" class="btn-outline-set no-decor">Atur</a>
 													</div>
 												</div>
 												<div class="flex w-100">
@@ -239,7 +239,7 @@
 												<div class="flex flex-center-vertical flex-between-horizontal">
 													<div class="secondary-title-card-detail">Pembangunan</div>
 													<div class="flex flex-gap-small flex-center-vertical">
-														<a href="/teknis/unit/detail-unit/{data.params.slug}/atur-pembangunan" class="btn-outline-set no-decor">Atur</a>
+														<a href="/v1/teknis/unit/detail-unit/{data.params.slug}/atur-pembangunan" class="btn-outline-set no-decor">Atur</a>
 													</div>
 												</div>
 												<div class="flex w-100">
@@ -283,7 +283,7 @@
 												<div class="flex flex-center-vertical flex-between-horizontal">
 													<div class="secondary-title-card-detail">Kavling Siap Bangun</div>
 													<div class="flex flex-gap-small flex-center-vertical">
-														<a href="/teknis/unit/detail-unit/{data.params.slug}/atur-kavling" class="btn-outline-set no-decor">Atur</a>
+														<a href="/v1/teknis/unit/detail-unit/{data.params.slug}/atur-kavling" class="btn-outline-set no-decor">Atur</a>
 													</div>
 												</div>
 												<div class="flex w-100">
@@ -326,7 +326,7 @@
 												<div class="flex flex-center-vertical flex-between-horizontal">
 													<div class="secondary-title-card-detail">Kavling Siap Bangun</div>
 													<div class="flex flex-gap-small flex-center-vertical">
-														<a href="/teknis/unit/detail-unit/{data.params.slug}/atur-kavling" class="btn-outline-set no-decor">Atur</a>
+														<a href="/v1/teknis/unit/detail-unit/{data.params.slug}/atur-kavling" class="btn-outline-set no-decor">Atur</a>
 													</div>
 												</div>
 												<div class="flex w-100">
@@ -372,7 +372,7 @@
 											<div class="flex flex-center-vertical flex-between-horizontal">
 												<div class="secondary-title-card-detail">Checklist Progress</div>
 												<div class="flex flex-gap-small flex-center-vertical">
-													<a href="/teknis/unit/detail-unit/{data.params.slug}/atur-progress" class="btn-outline-set no-decor">Atur</a>
+													<a href="/v1/teknis/unit/detail-unit/{data.params.slug}/atur-progress" class="btn-outline-set no-decor">Atur</a>
 													{#if progressDrop == 0}
 														<img src="/images/icons/Caret_Down_MD.svg" class="pointer" on:click={() => {
 															progressDrop = 1;
@@ -576,7 +576,7 @@
 																	</div>
 																</div>
 															</div>
-															<a href="/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[0].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[0].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">Air</div>
@@ -596,7 +596,7 @@
 																</div>
 															</div>
 															</a>
-															<a href="/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[1].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[1].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">SLO</div>
@@ -616,7 +616,7 @@
 																</div>
 															</div>
 															</a>
-															<a href="/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[2].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[2].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">BP</div>
@@ -636,7 +636,7 @@
 																</div>
 															</div>
 															</a>
-															<a href="/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[3].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[3].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">KWH Listrik</div>
@@ -669,7 +669,7 @@
 																	</div>
 																</div>
 															</div>
-															<a href="/teknis/unit/detail-unit/{progressUnit[1].id_progresses}/atur-progress-selected/{progressUnit[1].detail[0].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[1].id_progresses}/atur-progress-selected/{progressUnit[1].detail[0].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">{progressUnit[1].detail[0].nama_progress}</div>
@@ -689,7 +689,7 @@
 																</div>
 															</div>
 															</a>
-															<a href="/teknis/unit/detail-unit/{progressUnit[1].id_progresses}/atur-progress-selected/{progressUnit[1].detail[1].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[1].id_progresses}/atur-progress-selected/{progressUnit[1].detail[1].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">Drainase</div>
@@ -722,7 +722,7 @@
 																	</div>
 																</div>
 															</div>
-															<a href="/teknis/unit/detail-unit/{progressUnit[2].id_progresses}/atur-progress-selected/{progressUnit[2].detail[0].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[2].id_progresses}/atur-progress-selected/{progressUnit[2].detail[0].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">SSB</div>
@@ -742,7 +742,7 @@
 																</div>
 															</div>
 															</a>
-															<a href="/teknis/unit/detail-unit/{progressUnit[2].id_progresses}/atur-progress-selected/{progressUnit[2].detail[1].id_progresses_detail}" class="no-decor">
+															<a href="/v1/teknis/unit/detail-unit/{progressUnit[2].id_progresses}/atur-progress-selected/{progressUnit[2].detail[1].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">FLPP</div>

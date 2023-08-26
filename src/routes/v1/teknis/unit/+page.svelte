@@ -1,9 +1,9 @@
 <script type="text/javascript">
-	import Sidebar from '../../../components/sidebar.svelte'
-	import Navbar from '../../../components/navbar.svelte'
+	import Sidebar from '../../../../components/sidebar.svelte'
+	import Navbar from '../../../../components/navbar.svelte'
 	import { onMount } from 'svelte';
 	import {fly, scale} from 'svelte/transition'
-	import ApiController from '../../../ApiController';
+	import ApiController from '../../../../ApiController';
 
 	let overflow = null;
 	let dataUnit = [];
@@ -155,7 +155,7 @@
 						</div>
 						{#if dataUnit}
 							{#each dataUnit as data, index}
-							<a href="/teknis/unit/detail-unit/{data.informasi_unit.id_unit}" class="no-decor">
+							<a href="/v1/teknis/unit/detail-unit/{data.informasi_unit.id_unit}" class="no-decor">
 								<div class="card-head w-content-2 height-fit">
 									<div class="flex">
 										<div class="flex flex-gap-small flex-center-vertical w-30 no-border-table">

@@ -1,9 +1,9 @@
 <script type="text/javascript">
-	import Sidebar from '../../../../../components/sidebar.svelte'
-	import Navbar from '../../../../../components/navbar.svelte'
+	import Sidebar from '../../../../../../components/sidebar.svelte'
+	import Navbar from '../../../../../../components/navbar.svelte'
 	import { onMount, afterUpdate } from 'svelte';
 	import {fly, scale} from 'svelte/transition'
-	import ApiController from '../../../../../ApiController';
+	import ApiController from '../../../../../../ApiController';
 
 	export let data
 
@@ -194,7 +194,7 @@
 											<div class="flex flex-center-vertical flex-between-horizontal">
 												<div class="secondary-title-card-detail">Checklist Progress</div>
 												<div class="flex flex-gap-small flex-center-vertical">
-													<a href="/legal/unit/detail-unit/{data.params.slug}/atur-progress" class="btn-outline-set no-decor">Atur</a>
+													<a href="/v1/legal/unit/detail-unit/{data.params.slug}/atur-progress" class="btn-outline-set no-decor">Atur</a>
 													{#if progressDrop == 0}
 														<img src="/images/icons/Caret_Down_MD.svg" class="pointer" on:click={() => {
 															progressDrop = 1;
@@ -374,7 +374,7 @@
 																	</div>
 																</div>
 															</div>
-															<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[0].id_progresses_detail}" class="no-decor">
+															<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[0].detail[0].id_progresses_detail}" class="no-decor">
 															<div class="flex w-100 flex-center-vertical">
 																<div class="w-20">
 																	<div class="name-progress">Siteplan</div>
@@ -407,7 +407,7 @@
 																</div>
 															</div>
 														</div>
-														<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[0].id_progresses_detail}" class="no-decor">
+														<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[0].id_progresses_detail}" class="no-decor">
 														<div class="flex w-100 flex-center-vertical">
 															<div class="w-20">
 																<div class="name-progress">Induk</div>
@@ -427,7 +427,7 @@
 															</div>
 														</div>
 														</a>
-														<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[1].id_progresses_detail}" class="no-decor">
+														<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[1].id_progresses_detail}" class="no-decor">
 														<div class="flex w-100 flex-center-vertical">
 															<div class="w-20">
 																<div class="name-progress">SPS</div>
@@ -447,7 +447,7 @@
 															</div>
 														</div>
 														</a>
-														<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[2].id_progresses_detail}" class="no-decor">
+														<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[1].detail[2].id_progresses_detail}" class="no-decor">
 														<div class="flex w-100 flex-center-vertical">
 															<div class="w-20">
 																<div class="name-progress">Splitzing</div>
@@ -480,7 +480,7 @@
 																</div>
 															</div>
 														</div>
-														<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[2].detail[0].id_progresses_detail}" class="no-decor">
+														<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[2].detail[0].id_progresses_detail}" class="no-decor">
 														<div class="flex w-100 flex-center-vertical">
 															<div class="w-20">
 																<div class="name-progress">Induk</div>
@@ -500,7 +500,7 @@
 															</div>
 														</div>
 														</a>
-														<a href="/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[2].detail[1].id_progresses_detail}" class="no-decor">
+														<a href="/v1/legal/unit/detail-unit/{progressUnit[0].id_progresses}/atur-progress-selected/{progressUnit[2].detail[1].id_progresses_detail}" class="no-decor">
 														<div class="flex w-100 flex-center-vertical">
 															<div class="w-20">
 																<div class="name-progress">Splitzing</div>

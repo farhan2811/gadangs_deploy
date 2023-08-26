@@ -1,9 +1,9 @@
 <script type="text/javascript">
-	import Sidebar from '../../../components/sidebar.svelte'
-	import Navbar from '../../../components/navbar.svelte'
+	import Sidebar from '../../../../components/sidebar.svelte'
+	import Navbar from '../../../../components/navbar.svelte'
 	import { onMount } from 'svelte';
 	import {fly, scale} from 'svelte/transition'
-	import ApiController from '../../../ApiController';
+	import ApiController from '../../../../ApiController';
 	import { each } from 'svelte/internal';
 	let active = 0
 
