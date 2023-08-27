@@ -455,13 +455,15 @@
 						  stageData.height()
 						);
 
+						pdf.save("test.pdf")
+
 						console.log(pdf.output('datauristring'))
 
 						const formData = new FormData();
 						// console.log(pdf.output('datauristring').split('base64,')[1].length)
 						formData.append('id_tanda_tangan', id_ttd);
 						formData.append('dokumen', pdf.output('datauristring').split('base64,')[1]);
-
+						console.log(typeof frag_id)
 						ApiController({
 							method: "POST",
 							endpoint: `approval/FRAGMENT/${frag_id}/sign`,
