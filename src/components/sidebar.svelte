@@ -380,13 +380,13 @@
 							</div>
 							<img src="/images/icons/Caret_Down_MD.svg" alt="">
 						</div>
-						<a href="/v1/super-admin/pengaturan/profile" class="no-decor">
+						<a href="/super-admin/pengaturan/profile" class="no-decor">
 							<div class="flex flex-gap-semi-small flex-center-vertical sidebar-content">
 								<img alt="" src="/images/icons/List_Ordered_Active.svg" class="icon-sidebar" style="visibility: hidden;">
 								<span class="{statusPointer == "PengaturanProfile" ? 'text-sidebar-active' : 'text-sidebar'}">Profile</span>
 							</div>
 						</a>
-						<a href="/v1/super-admin/pengaturan/akun" class="no-decor">
+						<a href="/super-admin/pengaturan/akun" class="no-decor">
 							<div class="flex flex-gap-semi-small flex-center-vertical sidebar-content">
 								<img alt="" src="/images/icons/List_Ordered_Active.svg" class="icon-sidebar" style="visibility: hidden;">
 								<span class="{statusPointer == "PengaturanAkun" ? 'text-sidebar-active' : 'text-sidebar'}">Akun</span>
@@ -430,7 +430,7 @@
 					</div>
 					{#if statusPointer == "Dashboard"}
 						<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-							<a href="/v1/super-admin/dashboard" class="no-decor">
+							<a href="/super-admin/dashboard" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -443,7 +443,7 @@
 						</div>
 					{:else}
 						<div class="flex flex-direction-col flex-gap-semi-large">
-							<a href="/v1/super-admin/dashboard" class="no-decor">
+							<a href="/super-admin/dashboard" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -457,7 +457,7 @@
 					{/if}
 					{#if statusPointer == "Kompilasi"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/kompilasi-perumahan" class="no-decor">
+						<a href="/super-admin/kompilasi-perumahan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -470,7 +470,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/kompilasi-perumahan" class="no-decor">
+						<a href="/super-admin/kompilasi-perumahan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -484,7 +484,7 @@
 					{/if}
 					{#if statusPointer == "Laporan"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/laporan" class="no-decor">
+						<a href="/super-admin/laporan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -497,7 +497,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/laporan" class="no-decor">
+						<a href="/super-admin/laporan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -511,7 +511,7 @@
 					{/if}
 					{#if statusPointer == "Rekap"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/rekap-data" class="no-decor">
+						<a href="/super-admin/rekap-data" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -524,7 +524,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/rekap-data" class="no-decor">
+						<a href="/super-admin/rekap-data" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -538,7 +538,7 @@
 					{/if}
 					{#if statusPointer == "KelolaPerum"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/kelola-perum" class="no-decor">
+						<a href="/super-admin/kelola-perum" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -551,7 +551,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/kelola-perum" class="no-decor">
+						<a href="/super-admin/kelola-perum" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -565,7 +565,7 @@
 					{/if}
 					{#if statusPointer == "Nup"}
 						<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-							<a href="/v1/super-admin/nup" class="no-decor">
+							<a href="/super-admin/nup" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -578,7 +578,7 @@
 						</div>
 					{:else}
 						<div class="flex flex-direction-col flex-gap-semi-large">
-							<a href="/v1/super-admin/nup" class="no-decor">
+							<a href="/super-admin/nup" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -592,7 +592,7 @@
 					{/if}
 					{#if statusPointer == "Pemberkasan"}
 						<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-							<a href="/v1/super-admin/pemberkasan" class="no-decor">
+							<a href="/super-admin/pemberkasan" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -605,7 +605,7 @@
 						</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-							<a href="/v1/super-admin/pemberkasan" class="no-decor">
+							<a href="/super-admin/pemberkasan" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -619,7 +619,7 @@
 					{/if}
 					{#if statusPointer == "Komisi"}
 						<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-							<a href="/v1/super-admin/komisi" class="no-decor">
+							<a href="/super-admin/komisi" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -632,7 +632,7 @@
 						</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-							<a href="/v1/super-admin/komisi" class="no-decor">
+							<a href="/super-admin/komisi" class="no-decor">
 								<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
 										<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -646,7 +646,7 @@
 					{/if}
 					{#if statusPointer == "Cicilan"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/cicilan" class="no-decor">
+						<a href="/super-admin/cicilan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -659,7 +659,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/cicilan" class="no-decor">
+						<a href="/super-admin/cicilan" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -673,7 +673,7 @@
 					{/if}
 					{#if statusPointer == "Akun"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/akun" class="no-decor">
+						<a href="/super-admin/akun" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -686,7 +686,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/akun" class="no-decor">
+						<a href="/super-admin/akun" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -700,7 +700,7 @@
 					{/if}
 					{#if statusPointer == "Agensi"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/agensi" class="no-decor">
+						<a href="/super-admin/agensi" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -713,7 +713,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/agensi" class="no-decor">
+						<a href="/super-admin/agensi" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -739,7 +739,7 @@
 					</div> -->
 					{#if statusPointer == "Approval"}
 					<div class="flex flex-direction-col flex-gap-semi-large active-sidebar">
-						<a href="/v1/super-admin/approval" class="no-decor">
+						<a href="/super-admin/approval" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
@@ -752,7 +752,7 @@
 					</div>
 					{:else}
 					<div class="flex flex-direction-col flex-gap-semi-large">
-						<a href="/v1/super-admin/approval" class="no-decor">
+						<a href="/super-admin/approval" class="no-decor">
 							<div class="flex flex-direction-col flex-gap-regular sidebar-content">
 								<div class="flex flex-gap-semi-small flex-center-vertical">
 									<div class="flex flex-gap-semi-small flex-center-vertical">
